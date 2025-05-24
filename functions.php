@@ -29,7 +29,6 @@ function customize_free_price_toggle( $wp_customize ) {
 add_filter( 'woocommerce_get_price_html', 'wp_price_free_zero_empty', 100, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wp_price_free_zero_empty', 100, 2 );
 function wp_price_free_zero_empty( $price, $product ) {
-
     if ( ! get_theme_mod('enable_free_price', true) ) {
         return $price;
     }
